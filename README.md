@@ -18,24 +18,20 @@
 https://grboy6770.github.io/dswu_id_mobile/
 ```
 
-## 배포 방법 (둘 중 하나)
+## 배포 방법 — Pages 한 번만 켜주면 됩니다
 
-> ⚠️ private 저장소는 GitHub Pages 공개 URL 생성을 위해 **Pro 이상 플랜**이 필요합니다.
-> 무료 계정이라면 먼저 **저장소를 Public으로 전환**하세요.
-> (Settings → General → 맨 아래 Danger Zone → *Change repository visibility* → Public)
+> Pages 최초 활성화(사이트 생성)는 **저장소 소유자만** 할 수 있습니다.
+> (Actions 워크플로우 토큰에는 이 권한이 없어 자동으로는 못 켭니다.)
 
-### 방법 A — GitHub Actions (권장, 자동)
-1. 저장소를 **Public**으로 전환한다.
-2. `Settings → Pages → Build and deployment → Source`를 **GitHub Actions**로 둔다.
-   (이 저장소의 워크플로우가 Pages를 자동 활성화하도록 설정되어 있음)
-3. `Actions` 탭에서 **Deploy to GitHub Pages** 워크플로우가 성공하면 위 주소로 접속.
-   실행이 안 보이면 워크플로우를 **Run workflow**(수동 실행)로 한 번 돌린다.
+### 방법 A — 브랜치에서 바로 배포 (권장, 가장 간단)
+1. `Settings → Pages → Build and deployment → Source`를 **Deploy from a branch**로 선택.
+2. Branch: `claude/mobile-web-address-bm0zg1`, 폴더 `/(root)` → **Save**.
+3. 1~2분 뒤 위 주소로 접속. (워크플로우 불필요)
 
-### 방법 B — 브랜치에서 바로 배포 (워크플로우 없이)
-1. 저장소를 **Public**으로 전환한다.
-2. `Settings → Pages → Source`를 **Deploy from a branch**로 선택.
-3. Branch: `claude/mobile-web-address-bm0zg1` / `/(root)` → **Save**.
-4. 1~2분 뒤 위 주소로 접속.
+### 방법 B — GitHub Actions로 배포
+1. `Settings → Pages → Source`를 **GitHub Actions**로 켠다. (여기서 Pages가 최초 생성됨)
+2. `Actions` 탭 → **Deploy to GitHub Pages** → **Run workflow**로 수동 실행.
+3. 실행이 성공하면 위 주소로 접속.
 
 ## 내용 수정
 초대장 문구·날짜·장소·인스타그램·지도 링크는 모두 `index.html` 안에 있습니다.
