@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+# claude/mobile-web-address-bm0zg1 브랜치에 푸시될 때, 또는 수동 실행 시 배포
+on:
+  push:
+    branches: ["claude/mobile-web-address-bm0zg1", "main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동시에 하나의 배포만 진행 (진행 중인 배포는 취소하지 않고 큐잉)
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Pages가 아직 켜져 있지 않아도 자동으로 활성화(enablement: true)
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
