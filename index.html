@@ -482,7 +482,7 @@
     }
 
     .map-section {
-      padding: 0;
+      padding: 0 0 88px;
       background: var(--ink);
       color: var(--paper);
     }
@@ -517,6 +517,20 @@
       letter-spacing: -.02em;
     }
 
+    .location-guide {
+      display: grid;
+      gap: 6px;
+      margin-top: 18px;
+      color: #c9c6a7;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .location-guide strong {
+      color: var(--paper);
+      font-weight: 700;
+    }
+
     .map-frame {
       display: block;
       width: 100%;
@@ -529,6 +543,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       border-top: 1px solid var(--paper);
+      border-bottom: 1px solid var(--paper);
     }
 
     .map-links a {
@@ -736,19 +751,23 @@
         <p class="section-label">Location</p>
         <h2 id="map-title">Space Sophora Gallery B1</h2>
         <address>서울 중구 덕수궁길 114 B1</address>
+        <div class="location-guide">
+          <p><strong>오시는 길</strong> | 광화문역 6번 출구 / 시청역 1번 출구에서 도보 10분</p>
+          <p><strong>주차</strong> | 건물 내 주차 불가 / 근처 공영주차장 이용 (S타워빌딩 / 오피시아빌딩 주차장)</p>
+        </div>
         <p class="location-notice">화환 반입이 불가합니다.</p>
       </div>
+      <nav class="map-links" aria-label="지도 앱에서 장소 검색">
+        <a href="https://map.naver.com/p/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EA%B0%A4%EB%9F%AC%EB%A6%AC%20%EB%8D%95%EC%88%98%EA%B6%81%EA%B8%B8%20114" target="_blank" rel="noopener noreferrer">NAVER MAP</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Space+Sophora+Gallery%2C+114+Deoksugung-gil%2C+Jung-gu%2C+Seoul" target="_blank" rel="noopener noreferrer">GOOGLE MAPS</a>
+        <a href="https://map.kakao.com/link/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EA%B0%A4%EB%9F%AC%EB%A6%AC" target="_blank" rel="noopener noreferrer">KAKAO MAP</a>
+      </nav>
       <iframe
         class="map-frame"
         title="Space Sophora Gallery 위치 지도"
         src="https://www.openstreetmap.org/export/embed.html?bbox=126.9695%2C37.5625%2C126.9790%2C37.5690&amp;layer=mapnik&amp;marker=37.56575%2C126.97415"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <nav class="map-links" aria-label="지도 앱에서 장소 검색">
-        <a href="https://map.naver.com/p/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EA%B0%A4%EB%9F%AC%EB%A6%AC%20%EB%8D%95%EC%88%98%EA%B6%81%EA%B8%B8%20114" target="_blank" rel="noopener noreferrer">NAVER MAP</a>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Space+Sophora+Gallery%2C+114+Deoksugung-gil%2C+Jung-gu%2C+Seoul" target="_blank" rel="noopener noreferrer">GOOGLE MAPS</a>
-        <a href="https://map.kakao.com/link/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EA%B0%A4%EB%9F%AC%EB%A6%AC" target="_blank" rel="noopener noreferrer">KAKAO MAP</a>
-      </nav>
     </section>
   </main>
 
