@@ -32,10 +32,16 @@ jobs:
         with:
           enablement: true
 
+      - name: Prepare site artifact
+        run: |
+          mkdir -p _site/assets
+          cp index.html .nojekyll favicon.svg favicon-32.png apple-touch-icon.png icon-512.png og-thumbnail.png _site/
+          cp assets/*.webp _site/assets/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: "_site"
 
       - name: Deploy to GitHub Pages
         id: deployment

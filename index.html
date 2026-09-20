@@ -1,320 +1,915 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>사이는 공간이 아니다 · DSID 제61회 졸업전시</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>사이는 공간이 아니다 · DSID 제61회 졸업전시</title>
+  <meta name="description" content="덕성여자대학교 실내디자인전공 제61회 졸업전시. 오프닝 2026년 10월 29일 오후 5시 30분, 전시 10월 30일부터 11월 4일까지.">
 
-<!-- SNS 공유 미리보기(썸네일). 배포 주소: https://grboy6770.github.io/dswu_id_mobile/ -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="사이는 공간이 아니다 — THE IN-BETWEEN IS NOT A VOID">
-<meta property="og:description" content="덕성여자대학교 실내디자인전공 제61회 졸업전시 · 2026.10.29–11.04 · Space Sophora Gallery">
-<meta property="og:url" content="https://grboy6770.github.io/dswu_id_mobile/">
-<meta property="og:image" content="https://grboy6770.github.io/dswu_id_mobile/og-thumbnail.png">
-<meta property="og:image:width" content="2400">
-<meta property="og:image:height" content="1260">
-<meta property="og:image:alt" content="사이는 공간이 아니다 · DSID 제61회 졸업전시">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="사이는 공간이 아니다 — THE IN-BETWEEN IS NOT A VOID">
-<meta name="twitter:description" content="덕성여자대학교 실내디자인전공 제61회 졸업전시 · 2026.10.29–11.04 · Space Sophora Gallery">
-<meta name="twitter:image" content="https://grboy6770.github.io/dswu_id_mobile/og-thumbnail.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="사이는 공간이 아니다 — THE IN-BETWEEN IS NOT A VOID">
+  <meta property="og:description" content="오프닝 2026.10.29 오후 5시 30분 · 전시 2026.10.30–11.04 · Space Sophora Gallery">
+  <meta property="og:url" content="https://grboy6770.github.io/dswu_id_mobile/">
+  <meta property="og:image" content="https://grboy6770.github.io/dswu_id_mobile/og-thumbnail.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="사이는 공간이 아니다 · DSID 제61회 졸업전시">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="사이는 공간이 아니다 — THE IN-BETWEEN IS NOT A VOID">
+  <meta name="twitter:description" content="오프닝 2026.10.29 오후 5시 30분 · 전시 2026.10.30–11.04 · Space Sophora Gallery">
+  <meta name="twitter:image" content="https://grboy6770.github.io/dswu_id_mobile/og-thumbnail.png">
 
-<!-- Favicon -->
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#f4e02f">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#e9e5b6">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Archivo:wght@600;800;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#f2eea6; --paper-2:#ede9a0; --tape:#f4e02f;
-    --ink:#1c1c1a; --gray:#9a9a95; --gray-lt:#c9c8bf; --line:#26261f;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-  html{scroll-behavior:smooth;}
-  body{font-family:'Noto Sans KR',sans-serif;background:#333;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
-  body.locked{overflow:hidden;height:100vh;}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Gothic+A1:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
 
-  .wrap{max-width:480px;margin:0 auto;background:var(--paper);min-height:100vh;position:relative;overflow:hidden;}
+  <style>
+    :root {
+      --paper: #e9e5b6;
+      --paper-light: #f2efca;
+      --tape: #f0ea7b;
+      --ink: #2b2b27;
+      --muted: #66665e;
+      --line: rgba(43, 43, 39, .42);
+      --white: #f8f7ed;
+      --page-width: 520px;
+    }
 
-  /* ================= DOOR INTRO ================= */
-  #intro{
-    position:fixed;inset:0;z-index:100;
-    display:flex;align-items:center;justify-content:center;
-    background:#2b2b28;
-    perspective:1700px;perspective-origin:50% 45%;
-    transition:transform .85s cubic-bezier(.7,0,.2,1);
-  }
-  #intro.lift{transform:translateY(-100%);}
-  .frame{
-    position:relative;width:min(480px,100%);height:100%;
-    max-height:100vh;
-    background:
-      radial-gradient(120% 80% at 50% 40%, rgba(244,224,47,.10), transparent 60%),
-      repeating-linear-gradient(180deg, rgba(255,255,255,.015) 0 2px, transparent 2px 7px),
-      #22221f;
-    display:flex;align-items:center;justify-content:center;
-    overflow:hidden;
-  }
-  /* what you see behind the doors when they open */
-  .behind{
-    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;color:var(--paper);padding:30px;
-    opacity:0;transition:opacity .6s ease .5s;
-  }
-  #intro.open .behind{opacity:1;}
-  .behind .en{font-family:'Archivo',sans-serif;font-weight:900;font-size:13px;letter-spacing:.18em;color:var(--tape);text-transform:uppercase;margin-bottom:14px;}
-  .behind .ko{font-weight:900;font-size:clamp(38px,12vw,52px);line-height:1.05;}
-  .behind .go{margin-top:26px;font-size:12px;letter-spacing:.2em;color:var(--gray-lt);animation:bob 1.4s ease-in-out infinite;}
-  .behind .go span{display:block;font-size:20px;margin-top:4px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  .leaf{
-    position:absolute;top:0;bottom:0;width:50%;
-    background:
-      linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.14)),
-      repeating-linear-gradient(180deg, rgba(0,0,0,.05) 0 3px, transparent 3px 9px),
-      var(--paper);
-    box-shadow:inset 0 0 60px rgba(0,0,0,.25);
-    transition:transform 1.7s cubic-bezier(.7,.02,.28,1);
-    backface-visibility:hidden;z-index:5;
-  }
-  .leaf .panel{position:absolute;top:38px;bottom:38px;left:24px;right:24px;border:2px solid rgba(0,0,0,.16);}
-  .leaf .panel::after{content:"";position:absolute;top:12px;left:12px;right:12px;bottom:12px;border:1px solid rgba(0,0,0,.08);}
-  .leaf.left{left:0;transform-origin:left center;border-right:1px solid rgba(0,0,0,.18);}
-  .leaf.right{right:0;transform-origin:right center;border-left:1px solid rgba(0,0,0,.18);}
-  .leaf .knob{position:absolute;top:50%;width:12px;height:34px;border-radius:8px;background:rgba(0,0,0,.32);transform:translateY(-50%);}
-  .leaf.left .knob{right:14px;}
-  .leaf.right .knob{left:14px;}
-  /* darkening overlay on leaves that fades as they open (depth) */
-  .leaf::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.0);transition:background 1.4s;}
-  #intro.open .leaf.left{transform:rotateY(-108deg);}
-  #intro.open .leaf.right{transform:rotateY(108deg);}
-  #intro.open .leaf::before{background:rgba(0,0,0,.35);}
+    html {
+      scroll-behavior: smooth;
+      background: #74746f;
+    }
 
-  .tape-i{position:absolute;background:var(--tape);z-index:8;opacity:.92;pointer-events:none;}
-  .tape-i.a{top:-30px;left:-50px;width:220px;height:30px;transform:rotate(-40deg);}
-  .tape-i.b{bottom:-30px;right:-50px;width:220px;height:30px;transform:rotate(-40deg);}
+    body {
+      min-width: 280px;
+      background: #74746f;
+      color: var(--ink);
+      font-family: "Gothic A1", "Noto Sans KR", sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+    }
 
-  .hint{
-    position:absolute;left:50%;bottom:60px;transform:translateX(-50%);z-index:9;
-    text-align:center;color:var(--ink);cursor:pointer;
-    transition:opacity .4s;
-  }
-  #intro.open .hint{opacity:0;}
-  .hint .badge{
-    background:var(--tape);color:var(--ink);font-weight:800;font-size:13px;letter-spacing:.16em;
-    padding:12px 24px;border-radius:40px;text-transform:uppercase;box-shadow:0 6px 18px rgba(0,0,0,.3);
-    display:inline-block;animation:pulse 1.6s ease-in-out infinite;
-  }
-  .hint .ko{margin-top:12px;color:#2c2c28;font-size:13px;letter-spacing:.08em;font-weight:700;white-space:nowrap;}
+    body.is-locked {
+      height: 100vh;
+      overflow: hidden;
+    }
 
-  @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.06);}}
-  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-  /* ================= REVEAL ON SCROLL ================= */
-  .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);}
-  .rv.in{opacity:1;transform:none;}
+    button {
+      font: inherit;
+    }
 
-  /* ================= HERO ================= */
-  .tape{position:absolute;background:var(--tape);z-index:3;pointer-events:none;opacity:.92;}
-  .tape.t1{top:-40px;left:-60px;width:220px;height:34px;transform:rotate(-38deg);}
-  .tape.t2{top:60px;right:-70px;width:200px;height:30px;transform:rotate(42deg);}
-  .hero{position:relative;padding:52px 28px 40px;background:
-    linear-gradient(180deg, rgba(242,238,166,0) 0%, rgba(242,238,166,.85) 78%, var(--paper) 100%),
-    repeating-linear-gradient(180deg, rgba(0,0,0,.03) 0 2px, transparent 2px 5px), var(--paper);overflow:hidden;}
-  .kicker{position:relative;z-index:2;font-size:9.5px;letter-spacing:.16em;font-weight:700;color:var(--ink);text-transform:uppercase;border-bottom:1.5px solid var(--ink);display:inline-block;padding-bottom:6px;max-width:100%;}
-  .kicker small{display:block;letter-spacing:.16em;font-weight:500;color:#4a4a42;margin-top:4px;font-size:10px;}
-  .title-ko{position:relative;z-index:2;margin-top:26px;font-weight:900;font-size:clamp(40px,13vw,58px);line-height:1.02;letter-spacing:-.01em;}
-  .title-ko span{display:block;}
-  .title-ko .hl{position:relative;display:inline-block;}
-  .title-ko .hl::after{content:"";position:absolute;left:-4px;right:-4px;bottom:6px;height:38%;background:var(--tape);z-index:-1;opacity:.9;}
-  .title-en{position:relative;z-index:2;margin-top:22px;font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(26px,8.2vw,38px);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;}
-  .title-en .void{position:relative;}
-  .title-en .void::before{content:"✕";position:absolute;right:-26px;top:-2px;font-size:20px;font-weight:700;color:var(--ink);border:1.5px solid var(--ink);width:22px;height:22px;display:flex;align-items:center;justify-content:center;line-height:1;}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-  /* KEYS */
-  .keys{position:relative;z-index:2;margin:34px 20px 0;background:var(--ink);color:var(--paper);padding:24px 22px;}
-  .keys .row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(242,238,166,.18);}
-  .keys .row:first-child{padding-top:0;}
-  .keys .row:last-child{border-bottom:0;padding-bottom:0;}
-  .keys .lab{flex:0 0 58px;font-size:10px;letter-spacing:.18em;font-weight:700;color:var(--tape);text-transform:uppercase;padding-top:3px;}
-  .keys .val{flex:1;font-size:15px;font-weight:500;}
-  .keys .val .big{font-size:22px;font-weight:900;letter-spacing:.01em;color:var(--tape);}
-  .keys .val small{display:block;color:var(--gray-lt);font-weight:400;font-size:12.5px;margin-top:3px;}
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
-  /* STATEMENT */
-  .statement{padding:46px 30px 40px;position:relative;}
-  .statement .mark{font-weight:900;font-size:19px;line-height:1.45;margin-bottom:22px;letter-spacing:-.01em;}
-  .statement .mark em{font-style:normal;background:var(--tape);padding:1px 3px;}
-  .statement p{font-size:14px;color:#33332c;margin-bottom:16px;font-weight:400;}
-  .statement p .q{font-weight:700;}
-  .divider{height:1px;background:var(--line);opacity:.25;margin:6px 30px;}
+    .intro {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: #666763;
+      perspective: 1600px;
+      transition: opacity .65s ease, visibility .65s ease;
+    }
 
-  /* ACTIONS */
-  .actions{padding:34px 24px 10px;display:flex;flex-direction:column;gap:12px;}
-  .btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:16px;font-size:14.5px;font-weight:700;text-decoration:none;border:1.6px solid var(--ink);color:var(--ink);background:transparent;letter-spacing:.02em;transition:.15s;cursor:pointer;font-family:inherit;}
-  .btn.solid{background:var(--ink);color:var(--paper);}
-  .btn:active{transform:scale(.98);}
-  .btn svg{width:17px;height:17px;flex:0 0 auto;}
+    .intro[hidden] {
+      display: none;
+    }
 
-  .visit{margin:26px 24px 0;padding:22px;background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.1);}
-  .visit h3{font-size:11px;letter-spacing:.2em;font-weight:800;text-transform:uppercase;margin-bottom:12px;}
-  .visit .place{font-size:17px;font-weight:900;margin-bottom:4px;}
-  .visit .addr{font-size:13px;color:#4a4a42;}
+    .intro.is-finished {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
 
-  .foot{margin-top:40px;padding:34px 28px 46px;background:var(--ink);color:var(--paper);text-align:center;position:relative;}
-  .foot .ft-tape{position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);background:var(--tape);color:var(--ink);font-weight:800;font-size:11px;letter-spacing:.2em;padding:7px 18px;text-transform:uppercase;}
-  .foot .ig{display:inline-flex;align-items:center;gap:8px;color:var(--paper);text-decoration:none;font-weight:700;font-size:15px;margin-top:14px;border-bottom:1.5px solid var(--tape);padding-bottom:3px;}
-  .foot .ig svg{width:18px;height:18px;}
-  .foot .credit{margin-top:22px;font-size:11px;letter-spacing:.14em;color:var(--gray);line-height:1.9;}
+    .intro-stage {
+      position: relative;
+      width: min(100vw, 425px);
+      max-height: 100vh;
+      max-height: 100svh;
+      aspect-ratio: 425 / 630;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 20px 70px rgba(0, 0, 0, .32);
+      transform-style: preserve-3d;
+    }
 
-  .float-share{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:20;display:flex;align-items:center;gap:8px;background:var(--tape);color:var(--ink);border:none;padding:13px 22px;border-radius:40px;font-family:inherit;font-weight:800;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.28);cursor:pointer;letter-spacing:.02em;opacity:0;transition:opacity .5s;}
-  .float-share.show{opacity:1;}
-  .float-share svg{width:16px;height:16px;}
-  .float-share:active{transform:translateX(-50%) scale(.96);}
-  .toast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%) translateY(10px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:30px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:30;}
-  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+    .intro-poster {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-  @media(min-width:481px){body{padding:0;}.wrap{box-shadow:0 20px 60px rgba(0,0,0,.4);}}
-</style>
+    .door-button {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      background: #727470;
+      cursor: pointer;
+      transform-origin: left center;
+      transform-style: preserve-3d;
+      transition: transform 1.35s cubic-bezier(.72, .03, .2, 1);
+      backface-visibility: hidden;
+    }
+
+    .door-button::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      pointer-events: none;
+      box-shadow: inset -18px 0 28px rgba(0, 0, 0, .18);
+      transition: box-shadow 1.35s ease;
+    }
+
+    .door-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .intro.is-opening .door-button {
+      transform: rotateY(-104deg);
+    }
+
+    .intro.is-opening .door-button::after {
+      box-shadow: inset -90px 0 90px rgba(0, 0, 0, .46);
+    }
+
+    .page {
+      width: min(100%, var(--page-width));
+      min-height: 100vh;
+      margin: 0 auto;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 0 44px rgba(0, 0, 0, .25);
+    }
+
+    .poster {
+      position: relative;
+      background: var(--paper);
+    }
+
+    .poster img {
+      width: 100%;
+      height: auto;
+    }
+
+    .section {
+      padding: 70px 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      margin-bottom: 28px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .concept {
+      padding-top: 82px;
+      padding-bottom: 78px;
+    }
+
+    .concept-title {
+      display: grid;
+      grid-template-columns: max-content minmax(32px, 1fr) max-content;
+      align-items: center;
+      gap: clamp(8px, 2vw, 13px);
+      font-family: "Archivo", sans-serif;
+      font-size: clamp(14px, 3.7vw, 20px);
+      font-weight: 900;
+      line-height: .95;
+      letter-spacing: -.045em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .concept-title .cross-box {
+      position: relative;
+      min-width: 32px;
+      height: clamp(30px, 7vw, 42px);
+      border: 2px solid currentColor;
+    }
+
+    .concept-title .cross-box::before,
+    .concept-title .cross-box::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 2px);
+      height: 1.5px;
+      background: currentColor;
+      content: "";
+      transform-origin: center;
+    }
+
+    .concept-title .cross-box::before {
+      transform: translate(-50%, -50%) rotate(9deg);
+    }
+
+    .concept-title .cross-box::after {
+      transform: translate(-50%, -50%) rotate(-9deg);
+    }
+
+    .concept-ko {
+      margin-top: 26px;
+      font-size: clamp(16px, 4.6vw, 21px);
+      font-weight: 800;
+      letter-spacing: -.035em;
+    }
+
+    .statement {
+      display: grid;
+      gap: 17px;
+      margin-top: 42px;
+      color: #43433d;
+      font-size: 13px;
+      line-height: 1.9;
+      letter-spacing: -.018em;
+    }
+
+    .statement strong {
+      color: var(--ink);
+    }
+
+    .info {
+      background: var(--ink);
+      color: var(--paper-light);
+    }
+
+    .info .section-label {
+      color: var(--tape);
+    }
+
+    .info-list {
+      border-top: 1px solid rgba(233, 229, 182, .34);
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 16px;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(233, 229, 182, .24);
+    }
+
+    .info-term {
+      padding-top: 2px;
+      color: var(--tape);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .info-detail {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .info-detail strong {
+      display: block;
+      color: var(--white);
+      font-size: clamp(18px, 5vw, 23px);
+      line-height: 1.35;
+      letter-spacing: -.025em;
+    }
+
+    .info-detail small {
+      display: block;
+      margin-top: 6px;
+      color: #c9c6a7;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    .time-lines {
+      display: grid;
+      gap: 9px;
+    }
+
+    .time-lines span {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 8px;
+    }
+
+    .calendar-button {
+      display: flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 28px;
+      border: 1px solid var(--tape);
+      background: transparent;
+      color: var(--tape);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .people {
+      padding-top: 72px;
+      padding-bottom: 76px;
+    }
+
+    .professor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .person-card {
+      min-height: 153px;
+      padding: 20px 16px;
+      border: 1px solid var(--ink);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .person-card h3,
+    .committee h3,
+    .participants h3 {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .person-card .names {
+      margin-top: 25px;
+      font-size: clamp(15px, 4.2vw, 18px);
+      font-weight: 800;
+      line-height: 1.75;
+      letter-spacing: -.025em;
+    }
+
+    .committee {
+      margin-top: 52px;
+      padding-top: 24px;
+      border-top: 1px solid var(--ink);
+    }
+
+    .committee .names {
+      margin-top: 19px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 2;
+      letter-spacing: -.018em;
+    }
+
+    .participants {
+      margin-top: 52px;
+    }
+
+    .participant-list {
+      margin-top: 20px;
+      border-top: 1px solid var(--ink);
+      list-style: none;
+    }
+
+    .participant-row {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: baseline;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .participant-row .number {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .participant-row .names {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+
+    .notice {
+      padding: 36px 28px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      background: var(--tape);
+      text-align: center;
+    }
+
+    .notice strong {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -.035em;
+    }
+
+    .notice small {
+      display: block;
+      margin-top: 6px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .share-section {
+      padding-top: 68px;
+      padding-bottom: 72px;
+      text-align: center;
+    }
+
+    .share-main {
+      width: 100%;
+      min-height: 58px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .share-link {
+      display: inline-block;
+      min-height: 44px;
+      margin-top: 12px;
+      padding: 11px 10px;
+      border: 0;
+      border-bottom: 1px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      cursor: pointer;
+    }
+
+    .instagram {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      gap: 8px;
+      margin-top: 28px;
+      color: var(--ink);
+      font-family: "Archivo", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .share-status {
+      min-height: 24px;
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .map-section {
+      padding: 0;
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .map-heading {
+      padding: 45px 28px 23px;
+    }
+
+    .map-heading .section-label {
+      margin-bottom: 11px;
+      color: var(--tape);
+    }
+
+    .map-heading h2 {
+      color: var(--white);
+      font-size: 21px;
+      letter-spacing: -.03em;
+    }
+
+    .map-heading address {
+      margin-top: 7px;
+      color: #c9c6a7;
+      font-size: 12px;
+      font-style: normal;
+    }
+
+    .map-frame {
+      display: block;
+      width: 100%;
+      height: 320px;
+      border: 0;
+      background: #d7d7cf;
+    }
+
+    .map-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--paper);
+    }
+
+    .map-links a {
+      display: flex;
+      min-height: 60px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 5px;
+      border-right: 1px solid var(--paper);
+      color: var(--paper);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: clamp(8px, 2.55vw, 11px);
+      font-weight: 600;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .map-links a:last-child {
+      border-right: 0;
+    }
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .js .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    :focus-visible {
+      outline: 3px solid #ff6f00;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 359px) {
+      .section {
+        padding-right: 21px;
+        padding-left: 21px;
+      }
+
+      .info-row {
+        grid-template-columns: 72px 1fr;
+        gap: 10px;
+      }
+
+      .time-lines span {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .person-card {
+        padding-right: 12px;
+        padding-left: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
-<body class="locked">
-
-  <!-- ===== DOOR INTRO ===== -->
-  <div id="intro">
-    <div class="frame">
-      <div class="behind">
-        <div class="en">2026 · 61st DSID Graduation Exhibition</div>
-        <div class="ko">사이는<br>공간이 아니다</div>
-        <div class="go">ENTER<span>↓</span></div>
-      </div>
-      <span class="tape-i a"></span>
-      <span class="tape-i b"></span>
-      <div class="leaf left"><div class="panel"></div><div class="knob"></div></div>
-      <div class="leaf right"><div class="panel"></div><div class="knob"></div></div>
-      <div class="hint" id="hint">
-        <span class="badge">Tap to open</span>
-        <div class="ko">문을 열어보세요</div>
-      </div>
+<body>
+  <div class="intro" id="intro" hidden>
+    <div class="intro-stage">
+      <img class="intro-poster" src="assets/main-poster.webp" alt="" width="1100" height="1556">
+      <button class="door-button" id="door-button" type="button" aria-expanded="false" aria-controls="invitation">
+        <img src="assets/locker-door.webp" alt="사물함 문을 열어 초대장 보기" width="425" height="630">
+      </button>
     </div>
   </div>
 
-  <!-- ===== INVITATION ===== -->
-  <div class="wrap">
-    <span class="tape t1"></span>
-    <span class="tape t2"></span>
-
-    <header class="hero">
-      <div class="kicker rv">2026 · 61st DSID Graduation Exhibition
-        <small>DUKSUNG WOMEN'S UNIVERSITY · DEPT. OF INTERIOR DESIGN</small>
-      </div>
-      <h1 class="title-ko rv">
-        <span>사이는</span><span><span class="hl">공간이</span></span><span>아니다</span>
-      </h1>
-      <div class="title-en rv">
-        THE IN-BE<br>TWEEN IS<br><span class="void">NOT A&nbsp;&nbsp;VOID</span>
-      </div>
+  <main class="page" id="invitation">
+    <header class="poster">
+      <h1 class="sr-only" id="page-title" tabindex="-1">사이는 공간이 아니다 · 덕성여자대학교 실내디자인전공 제61회 졸업전시</h1>
+      <img src="assets/main-poster.webp" alt="사이는 공간이 아니다, 덕성여자대학교 실내디자인전공 제61회 졸업전시 메인 포스터" width="1100" height="1556" fetchpriority="high">
     </header>
 
-    <section class="keys rv">
-      <div class="row"><div class="lab">Date</div><div class="val"><span class="big">2026. 10.29 – 11.04</span><small>Oct 29 (Thu) – Nov 4 (Wed)</small></div></div>
-      <div class="row"><div class="lab">Place</div><div class="val">Space Sophora Gallery<small>스페이스 소포라 갤러리 · B1</small></div></div>
-      <div class="row"><div class="lab">Addr</div><div class="val">서울 중구 덕수궁길 114, B1<small>114 Deoksugung-gil, Jung-gu, Seoul</small></div></div>
+    <section class="section concept">
+      <div class="concept-title reveal" aria-label="The in-between is not a void">
+        <span>The in-between is</span>
+        <span class="cross-box" aria-hidden="true"></span>
+        <span>not a void</span>
+      </div>
+      <p class="concept-ko reveal">사이는 공간: (비어있는 곳) 이 아니다</p>
+
+      <div class="statement">
+        <p class="reveal">우리는 흔히 <strong>‘사이’</strong>를 비어 있는 공간이라 생각하지만, 그 안에는 관계가 형성되고 시간이 쌓이며 의미가 만들어진다.</p>
+        <p class="reveal">이 전시는 <strong>‘사이’</strong>를 관계와 과정, 의미가 축적되는 공간으로 바라본다.</p>
+        <p class="reveal">학생과 사회인의 경계에 선 우리 역시 하나의 <strong>‘사이’</strong>를 살아가고 있으며, 결코 비어 있지 않은 그 시간을 함께 이야기하고자 한다.</p>
+      </div>
     </section>
 
-    <section class="statement">
-      <p class="mark rv">사이는 공간 <em>( ; 비어있는 곳 )</em> 이 아니다.</p>
-      <p class="rv">우리는 흔히 <span class="q">‘사이’</span>를 비어 있는 공간이라 생각하지만, 그 안에는 관계가 형성되고 시간이 쌓이며 의미가 만들어진다.</p>
-      <p class="rv">이 전시는 <span class="q">‘사이’</span>를 관계와 과정, 의미가 축적되는 공간으로 바라본다.</p>
-      <p class="rv">학생과 사회인의 경계에 선 우리 역시 하나의 <span class="q">‘사이’</span>를 살아가고 있으며, 결코 비어 있지 않은 그 시간을 함께 이야기하고자 한다.</p>
+    <section class="section info" aria-labelledby="information-title">
+      <h2 class="section-label" id="information-title">Information</h2>
+      <dl class="info-list">
+        <div class="info-row reveal">
+          <dt class="info-term">Opening</dt>
+          <dd class="info-detail">
+            <strong>10.29(목) 오후 5시 30분</strong>
+            <small>Opening reception · Oct 29, 5:30 PM</small>
+          </dd>
+        </div>
+        <div class="info-row reveal">
+          <dt class="info-term">Date</dt>
+          <dd class="info-detail">
+            <strong>2026.10.30(금) – 2026.11.04(수)</strong>
+            <small>Oct 30 – Nov 4</small>
+          </dd>
+        </div>
+        <div class="info-row reveal">
+          <dt class="info-term">Time</dt>
+          <dd class="info-detail time-lines">
+            <span><b>10.30 – 11.03</b><b>10:00 – 18:00</b></span>
+            <span><b>11.04</b><b>10:00 – 14:00</b></span>
+          </dd>
+        </div>
+        <div class="info-row reveal">
+          <dt class="info-term">Place</dt>
+          <dd class="info-detail">Space Sophora Gallery B1<small>스페이스 소포라 갤러리 B1</small></dd>
+        </div>
+        <div class="info-row reveal">
+          <dt class="info-term">Addr</dt>
+          <dd class="info-detail">서울 중구 덕수궁길 114 B1<small>114 Deoksugung-gil, Jung-gu, Seoul</small></dd>
+        </div>
+      </dl>
+      <button class="calendar-button reveal" id="calendar-button" type="button">캘린더에 오프닝 일정 추가</button>
     </section>
 
-    <div class="divider"></div>
+    <section class="section people" aria-labelledby="people-title">
+      <h2 class="section-label" id="people-title">People</h2>
 
-    <section class="actions">
-      <a class="btn solid rv" href="https://map.naver.com/p/search/스페이스%20소포라%20갤러리%20덕수궁길" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        네이버 지도로 길찾기</a>
-      <a class="btn rv" href="https://www.google.com/maps/search/?api=1&query=Space+Sophora+Gallery+Deoksugung-gil+Seoul" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        Google Maps</a>
-      <button class="btn rv" id="calBtn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        캘린더에 일정 추가</button>
+      <div class="professor-grid">
+        <article class="person-card reveal">
+          <h3>학과장 교수</h3>
+          <p class="names">박태욱 교수님</p>
+        </article>
+        <article class="person-card reveal">
+          <h3>지도 교수</h3>
+          <p class="names">문은미 교수님<br>이미희 교수님</p>
+        </article>
+      </div>
+
+      <section class="committee reveal" aria-labelledby="committee-title">
+        <h3 id="committee-title">졸업준비위원회</h3>
+        <p class="names">안승희 · 김다빈 · 김도희 · 차수연 · 김성은 · 김소은 · 안채연</p>
+      </section>
+
+      <section class="participants" aria-labelledby="participants-title">
+        <h3 id="participants-title">Participants</h3>
+        <ol class="participant-list">
+          <li class="participant-row reveal"><span class="number">01</span><span class="names">김도희 · 김다빈 · 안승희</span></li>
+          <li class="participant-row reveal"><span class="number">02</span><span class="names">이주희 · 이채린 · 최예슬</span></li>
+          <li class="participant-row reveal"><span class="number">03</span><span class="names">강지인 · 안수연</span></li>
+          <li class="participant-row reveal"><span class="number">04</span><span class="names">김소은 · 안채연 · 차수연</span></li>
+          <li class="participant-row reveal"><span class="number">05</span><span class="names">김성은 · 구세연 · 박윤지</span></li>
+          <li class="participant-row reveal"><span class="number">06</span><span class="names">문가은 · 문성희</span></li>
+          <li class="participant-row reveal"><span class="number">07</span><span class="names">김다연 · 문세희 · 최예림</span></li>
+          <li class="participant-row reveal"><span class="number">08</span><span class="names">이다빈</span></li>
+          <li class="participant-row reveal"><span class="number">09</span><span class="names">김정연 · 이다솔 · 조민서</span></li>
+          <li class="participant-row reveal"><span class="number">10</span><span class="names">고예서 · 이수민</span></li>
+          <li class="participant-row reveal"><span class="number">11</span><span class="names">배수영 · 정윤서</span></li>
+        </ol>
+      </section>
     </section>
 
-    <section class="visit rv">
-      <h3>Exhibition Info</h3>
-      <div class="place">Space Sophora Gallery</div>
-      <div class="addr">서울특별시 중구 덕수궁길 114, 지하 1층(B1)<br>2026년 10월 29일(목) – 11월 4일(수)</div>
+    <aside class="notice" aria-label="화환 반입 안내">
+      <strong>화환 반입이 불가합니다</strong>
+      <small>Please do not bring flower wreaths</small>
+    </aside>
+
+    <section class="section share-section" aria-labelledby="share-title">
+      <h2 class="section-label" id="share-title">Share the invitation</h2>
+      <button class="share-main" type="button" data-share>초대장 공유하기</button>
+      <button class="share-link" type="button" data-share>링크로 초대장 공유하기</button>
+      <br>
+      <a class="instagram" href="https://instagram.com/dsid_2026" target="_blank" rel="noopener noreferrer" aria-label="인스타그램 dsid 2026 계정 열기">
+        <span aria-hidden="true">◎</span>
+        @dsid_2026
+      </a>
+      <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
     </section>
 
-    <footer class="foot">
-      <span class="ft-tape">The in-between is not a void</span>
-      <a class="ig" href="https://instagram.com/dsid_2026" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-        @dsid_2026</a>
-      <div class="credit">DUKSUNG WOMEN'S UNIVERSITY<br>DEPT. OF INTERIOR DESIGN<br>61st GRADUATION EXHIBITION · 2026</div>
-    </footer>
-  </div>
+    <section class="map-section" aria-labelledby="map-title">
+      <div class="map-heading">
+        <p class="section-label">Location</p>
+        <h2 id="map-title">Space Sophora Gallery B1</h2>
+        <address>서울 중구 덕수궁길 114 B1</address>
+      </div>
+      <iframe
+        class="map-frame"
+        title="Space Sophora Gallery 위치 지도"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=126.9695%2C37.5625%2C126.9790%2C37.5690&amp;layer=mapnik&amp;marker=37.56575%2C126.97415"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <nav class="map-links" aria-label="지도 앱에서 장소 검색">
+        <a href="https://map.naver.com/p/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EA%B0%A4%EB%9F%AC%EB%A6%AC%20%EB%8D%95%EC%88%98%EA%B6%81%EA%B8%B8%20114" target="_blank" rel="noopener noreferrer">NAVER MAP</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Space+Sophora+Gallery%2C+114+Deoksugung-gil%2C+Jung-gu%2C+Seoul" target="_blank" rel="noopener noreferrer">GOOGLE MAPS</a>
+        <a href="https://map.kakao.com/link/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EA%B0%A4%EB%9F%AC%EB%A6%AC" target="_blank" rel="noopener noreferrer">KAKAO MAP</a>
+      </nav>
+    </section>
+  </main>
 
-  <button class="float-share" id="shareBtn">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg>
-    초대장 공유하기</button>
-  <div class="toast" id="toast">링크가 복사되었어요</div>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var body = document.body;
+      var intro = document.getElementById("intro");
+      var doorButton = document.getElementById("door-button");
+      var invitation = document.getElementById("invitation");
+      var pageTitle = document.getElementById("page-title");
+      var shareStatus = document.getElementById("share-status");
+      var canonicalUrl = "https://grboy6770.github.io/dswu_id_mobile/";
+      var shareData = {
+        title: "사이는 공간이 아니다 · DSID 제61회 졸업전시",
+        text: "오프닝 10월 29일 오후 5시 30분 · 전시 10월 30일–11월 4일 · Space Sophora Gallery",
+        url: canonicalUrl
+      };
 
-<script>
-  // ===== Door open =====
-  var intro = document.getElementById('intro');
-  var opened = false;
-  function openDoor(){
-    if(opened) return; opened = true;
-    intro.classList.add('open');                 // doors swing open + behind title fades in
-    document.body.classList.remove('locked');
-    document.querySelector('.float-share').classList.add('show');
-    setTimeout(function(){ intro.classList.add('lift'); }, 1950);  // curtain lifts to reveal invitation
-    setTimeout(function(){ intro.style.display='none'; revealAll(); }, 2850);
-  }
-  intro.addEventListener('click', openDoor);
+      root.classList.add("js");
+      intro.hidden = false;
+      body.classList.add("is-locked");
+      invitation.setAttribute("aria-hidden", "true");
+      if ("inert" in invitation) {
+        invitation.inert = true;
+      }
 
-  // ===== Scroll reveal =====
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold:.15 });
-  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
-  function revealAll(){ // reveal anything already in view right after opening
-    document.querySelectorAll('.rv').forEach(function(el){
-      var r = el.getBoundingClientRect();
-      if(r.top < window.innerHeight*0.92){ el.classList.add('in'); }
-    });
-  }
+      function finishIntro() {
+        intro.classList.add("is-finished");
+        intro.setAttribute("aria-hidden", "true");
+        body.classList.remove("is-locked");
+        invitation.removeAttribute("aria-hidden");
+        if ("inert" in invitation) {
+          invitation.inert = false;
+        }
+        pageTitle.focus({ preventScroll: true });
+      }
 
-  // ===== Calendar (.ics) =====
-  document.getElementById('calBtn').addEventListener('click', function(ev){
-    ev.stopPropagation();
-    var ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//DSID//Grad//KO','BEGIN:VEVENT','UID:dsid-2026@dsid',
-      'DTSTART;VALUE=DATE:20261029','DTEND;VALUE=DATE:20261105',
-      'SUMMARY:사이는 공간이 아니다 - DSID 제61회 졸업전시',
-      'LOCATION:Space Sophora Gallery, 서울 중구 덕수궁길 114 B1',
-      'DESCRIPTION:덕성여자대학교 실내디자인전공 제61회 졸업전시','END:VEVENT','END:VCALENDAR'].join('\r\n');
-    var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));
-    a.download='DSID_2026_전시.ics';document.body.appendChild(a);a.click();a.remove();
-    showToast('캘린더 파일을 저장했어요');
-  });
+      doorButton.addEventListener("click", function () {
+        if (intro.classList.contains("is-opening")) return;
+        intro.classList.add("is-opening");
+        doorButton.setAttribute("aria-expanded", "true");
+        var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.setTimeout(finishIntro, reduceMotion ? 30 : 1400);
+      });
 
-  // ===== Share =====
-  document.getElementById('shareBtn').addEventListener('click', async function(ev){
-    ev.stopPropagation();
-    var data={title:'사이는 공간이 아니다 · DSID 제61회 졸업전시',text:'덕성여자대학교 실내디자인전공 졸업전시 · 2026.10.29–11.04 · Space Sophora Gallery',url:location.href};
-    if(navigator.share){try{await navigator.share(data);}catch(e){}}
-    else{try{await navigator.clipboard.writeText(location.href);showToast('링크가 복사되었어요');}catch(e){showToast('주소창의 링크를 복사해 주세요');}}
-  });
+      var revealItems = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: .12 });
 
-  var tt;
-  function showToast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show');},2000);}
-</script>
+        revealItems.forEach(function (item) {
+          observer.observe(item);
+        });
+      } else {
+        revealItems.forEach(function (item) {
+          item.classList.add("is-visible");
+        });
+      }
+
+      function setShareStatus(message) {
+        shareStatus.textContent = message;
+        window.clearTimeout(setShareStatus.timeout);
+        setShareStatus.timeout = window.setTimeout(function () {
+          shareStatus.textContent = "";
+        }, 3000);
+      }
+
+      async function copyShareUrl() {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(canonicalUrl);
+          return true;
+        }
+
+        var input = document.createElement("textarea");
+        input.value = canonicalUrl;
+        input.setAttribute("readonly", "");
+        input.style.position = "fixed";
+        input.style.opacity = "0";
+        document.body.appendChild(input);
+        input.select();
+        var copied = document.execCommand("copy");
+        input.remove();
+        return copied;
+      }
+
+      async function shareInvitation() {
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+            setShareStatus("공유 창을 열었습니다.");
+            return;
+          } catch (error) {
+            if (error && error.name === "AbortError") return;
+          }
+        }
+
+        try {
+          var copied = await copyShareUrl();
+          setShareStatus(copied ? "초대장 링크를 복사했습니다." : "주소창의 링크를 복사해 주세요.");
+        } catch (error) {
+          setShareStatus("주소창의 링크를 복사해 주세요.");
+        }
+      }
+
+      document.querySelectorAll("[data-share]").forEach(function (button) {
+        button.addEventListener("click", shareInvitation);
+      });
+
+      document.getElementById("calendar-button").addEventListener("click", function () {
+        var lines = [
+          "BEGIN:VCALENDAR",
+          "VERSION:2.0",
+          "PRODID:-//DSID//61st Graduation Exhibition//KO",
+          "CALSCALE:GREGORIAN",
+          "BEGIN:VEVENT",
+          "UID:dsid-2026-opening@dsid",
+          "DTSTAMP:20260920T000000Z",
+          "DTSTART:20261029T083000Z",
+          "SUMMARY:사이는 공간이 아니다 · DSID 제61회 졸업전시 오프닝",
+          "LOCATION:Space Sophora Gallery B1\\, 서울 중구 덕수궁길 114",
+          "DESCRIPTION:덕성여자대학교 실내디자인전공 제61회 졸업전시 오프닝",
+          "END:VEVENT",
+          "END:VCALENDAR"
+        ];
+        var blob = new Blob([lines.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = "DSID_2026_오프닝.ics";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(function () {
+          URL.revokeObjectURL(url);
+        }, 1000);
+      });
+    }());
+  </script>
 </body>
 </html>
