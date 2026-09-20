@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
@@ -9,15 +9,15 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="사이는 공간이 아니다 — THE IN-BETWEEN IS NOT A VOID">
   <meta property="og:description" content="오프닝 2026.10.29 17:30 · 전시 2026.10.30–11.04 · Space Sophora Gallery">
-  <meta property="og:url" content="https://grboy6770.github.io/dswu_id_mobile/">
-  <meta property="og:image" content="https://grboy6770.github.io/dswu_id_mobile/og-thumbnail.png">
-  <meta property="og:image:width" content="2400">
-  <meta property="og:image:height" content="1260">
+  <meta property="og:url" content="https://dsid-2026.pages.dev/">
+  <meta property="og:image" content="https://dsid-2026.pages.dev/og-thumbnail.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
   <meta property="og:image:alt" content="사이는 공간이 아니다 · DSID 제61회 졸업전시">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="사이는 공간이 아니다 — THE IN-BETWEEN IS NOT A VOID">
   <meta name="twitter:description" content="오프닝 2026.10.29 17:30 · 전시 2026.10.30–11.04 · Space Sophora Gallery">
-  <meta name="twitter:image" content="https://grboy6770.github.io/dswu_id_mobile/og-thumbnail.png">
+  <meta name="twitter:image" content="https://dsid-2026.pages.dev/og-thumbnail.jpg">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
@@ -116,10 +116,9 @@
 
     .intro-stage {
       position: relative;
-      width: min(100vw, 425px);
-      max-height: 100vh;
-      max-height: 100svh;
-      aspect-ratio: 2 / 3;
+      width: min(100vw, var(--page-width));
+      height: 100vh;
+      height: 100svh;
       overflow: hidden;
       background: var(--paper);
       box-shadow: 0 20px 70px rgba(0, 0, 0, .32);
@@ -131,7 +130,8 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      background: #62635f;
     }
 
     .door-button {
@@ -159,10 +159,86 @@
       transition: box-shadow 1.35s ease;
     }
 
-    .door-button img {
+    .door-surface {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .door-tape {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 5px 13px;
+      background:
+        linear-gradient(95deg, rgba(255, 255, 255, .24), transparent 22%, rgba(113, 101, 28, .1) 52%, transparent 78%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, .08) 0 1px, rgba(74, 68, 27, .035) 1px 3px),
+        linear-gradient(180deg, #f8f1a6, #ede582 48%, #f3eca0);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+      clip-path: polygon(0 9%, 3% 1%, 7% 7%, 12% 2%, 20% 6%, 31% 1%, 44% 5%, 58% 1%, 72% 6%, 84% 2%, 94% 7%, 100% 2%, 99% 91%, 96% 100%, 89% 95%, 80% 99%, 69% 95%, 57% 100%, 44% 96%, 31% 99%, 20% 95%, 10% 100%, 4% 94%, 0 98%);
+      color: #403d29;
+      font-size: clamp(13px, 3.8vw, 17px);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .door-tape-title {
+      top: 30%;
+      right: 8%;
+      transform: rotate(-5deg);
+    }
+
+    .door-tape-date {
+      top: 35.5%;
+      right: 7%;
+      font-family: "Archivo", sans-serif;
+      font-size: clamp(12px, 3.3vw, 15px);
+      font-weight: 600;
+      transform: rotate(5deg);
+    }
+
+    .door-name {
+      position: absolute;
+      top: 47%;
+      right: 8%;
+      z-index: 2;
+      min-width: 92px;
+      padding: 8px 15px 7px;
+      background: rgba(248, 248, 242, .92);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .14);
+      color: #292a27;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: clamp(13px, 3.5vw, 16px);
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-align: center;
+    }
+
+    .door-handle {
+      position: absolute;
+      top: 53%;
+      right: 5%;
+      z-index: 2;
+      width: 35%;
+      height: auto;
+      filter: drop-shadow(0 4px 5px rgba(0, 0, 0, .28));
+    }
+
+    .door-prompt {
+      position: absolute;
+      right: 0;
+      bottom: 4.5%;
+      left: 0;
+      color: rgba(240, 234, 123, .92);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-align: center;
     }
 
     .intro.is-opening .door-button {
@@ -184,12 +260,15 @@
 
     .poster {
       position: relative;
+      overflow: hidden;
       background: var(--paper);
     }
 
     .poster img {
-      width: 100%;
+      width: calc(100% + 2px);
+      max-width: none;
       height: auto;
+      transform: translateX(-1px);
     }
 
     .section {
@@ -212,28 +291,31 @@
     }
 
     .concept-title {
-      display: grid;
-      grid-template-columns: max-content minmax(32px, 1fr) max-content;
-      align-items: center;
-      gap: clamp(8px, 2vw, 13px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
       font-family: "Archivo", sans-serif;
-      font-size: clamp(14px, 3.7vw, 20px);
+      font-size: clamp(29px, 9vw, 42px);
       font-weight: 900;
-      line-height: .95;
-      letter-spacing: -.045em;
+      line-height: .91;
+      letter-spacing: -.05em;
       text-transform: uppercase;
       white-space: nowrap;
     }
 
-    .concept-title .cross-box {
+    .inline-cross-box {
       position: relative;
-      min-width: 32px;
+      display: inline-block;
+      width: clamp(56px, 19vw, 90px);
       height: 1em;
-      border: 2px solid currentColor;
+      flex: 0 0 auto;
+      border: 1.5px solid currentColor;
+      vertical-align: -.12em;
     }
 
-    .concept-title .cross-box::before,
-    .concept-title .cross-box::after {
+    .inline-cross-box::before,
+    .inline-cross-box::after {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -244,19 +326,56 @@
       transform-origin: center;
     }
 
-    .concept-title .cross-box::before {
-      transform: translate(-50%, -50%) rotate(9deg);
+    .inline-cross-box::before {
+      transform: translate(-50%, -50%) rotate(12deg);
     }
 
-    .concept-title .cross-box::after {
-      transform: translate(-50%, -50%) rotate(-9deg);
+    .inline-cross-box::after {
+      transform: translate(-50%, -50%) rotate(-12deg);
     }
 
     .concept-ko {
-      margin-top: 26px;
-      font-size: clamp(16px, 4.6vw, 21px);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 32px;
+      font-size: clamp(14px, 4.3vw, 19px);
       font-weight: 800;
       letter-spacing: -.035em;
+      white-space: nowrap;
+    }
+
+    .tape-label {
+      position: relative;
+      z-index: 0;
+      isolation: isolate;
+      width: fit-content;
+      color: var(--ink);
+    }
+
+    .tape-label::before {
+      position: absolute;
+      top: 50%;
+      left: -9px;
+      z-index: -1;
+      width: calc(100% + 18px);
+      height: 1.75em;
+      background:
+        linear-gradient(96deg, rgba(255, 255, 255, .28), transparent 20%, rgba(109, 99, 28, .1) 47%, transparent 73%, rgba(255, 255, 255, .12)),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, .08) 0 1px, rgba(74, 68, 27, .035) 1px 3px),
+        linear-gradient(180deg, #f8f1a5, var(--tape) 50%, #e8df75);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .18), inset 0 1px rgba(255, 255, 255, .24);
+      clip-path: polygon(0 10%, 3% 1%, 7% 7%, 12% 2%, 20% 6%, 31% 1%, 44% 5%, 58% 1%, 72% 6%, 84% 2%, 94% 7%, 100% 2%, 99% 91%, 96% 100%, 89% 95%, 80% 99%, 69% 95%, 57% 100%, 44% 96%, 31% 99%, 20% 95%, 10% 100%, 4% 94%, 0 98%);
+      content: "";
+      transform-origin: center;
+    }
+
+    .tape-up::before {
+      transform: translateY(-50%) rotate(-3.5deg);
+    }
+
+    .tape-down::before {
+      transform: translateY(-50%) rotate(3.5deg);
     }
 
     .statement {
@@ -280,6 +399,10 @@
 
     .info .section-label {
       color: var(--tape);
+    }
+
+    .info .info-term.tape-label {
+      color: #1f201c;
     }
 
     .info-list {
@@ -474,6 +597,13 @@
       text-decoration: none;
     }
 
+    .instagram svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+      stroke: currentColor;
+    }
+
     .share-status {
       min-height: 24px;
       margin-top: 13px;
@@ -625,7 +755,12 @@
     <div class="intro-stage">
       <img class="intro-poster" src="assets/main-poster.webp" alt="" width="1100" height="1556">
       <button class="door-button" id="door-button" type="button" aria-expanded="false" aria-controls="invitation">
-        <img src="assets/locker-door.webp" alt="사물함 문을 열어 초대장 보기" width="1024" height="1536">
+        <img class="door-surface" src="assets/locker-door.webp" alt="사물함 문을 열어 초대장 보기" width="1024" height="1536">
+        <span class="door-tape door-tape-title" aria-hidden="true">사이는 공간: 이 아니다</span>
+        <span class="door-tape door-tape-date" aria-hidden="true">Oct 29 – Nov 4</span>
+        <span class="door-name" aria-hidden="true">K 201</span>
+        <img class="door-handle" src="assets/locker-handle.webp" alt="" width="915" height="687" aria-hidden="true">
+        <span class="door-prompt" aria-hidden="true">TAP TO OPEN</span>
       </button>
     </div>
   </div>
@@ -637,12 +772,16 @@
     </header>
 
     <section class="section concept">
-      <div class="concept-title reveal" aria-label="The in-between is not a void">
-        <span>The in-between is</span>
-        <span class="cross-box" aria-hidden="true"></span>
-        <span>not a void</span>
+      <div class="concept-title reveal">
+        <span>The</span>
+        <span>In-between is</span>
+        <span>Not a void</span>
       </div>
-      <p class="concept-ko reveal">사이는 공간: (비어있는 곳) 이 아니다</p>
+      <p class="concept-ko tape-label tape-up reveal">
+        <span>사이는 공간</span>
+        <span class="inline-cross-box" aria-hidden="true"></span>
+        <span>이 아니다.</span>
+      </p>
 
       <div class="statement">
         <p class="reveal">우리는 흔히 <strong>‘사이’</strong>를 비어 있는 공간이라 생각하지만, 그 안에는 관계가 형성되고 시간이 쌓이며 의미가 만들어진다.</p>
@@ -655,7 +794,7 @@
       <h2 class="section-label" id="information-title">Information</h2>
       <dl class="info-list">
         <div class="info-row reveal">
-          <dt class="info-term">Opening</dt>
+          <dt class="info-term tape-label tape-down">Opening</dt>
           <dd class="info-detail">
             <strong>10.29(목) 17:30</strong>
             <small>Opening reception · Oct 29, 17:30</small>
@@ -664,7 +803,7 @@
         <div class="info-row reveal">
           <dt class="info-term">Date</dt>
           <dd class="info-detail">
-            <strong>2026.10.30(금) – 2026.11.04(수)</strong>
+            <strong>10.30(금) – 11.04(수)</strong>
             <small>Oct 30 – Nov 4</small>
           </dd>
         </div>
@@ -688,7 +827,7 @@
 
     <section class="section people">
       <section class="professors" aria-labelledby="professor-title">
-        <h2 class="section-label" id="professor-title">Professor</h2>
+        <h2 class="section-label tape-label tape-down" id="professor-title">Professor</h2>
         <div class="professor-content reveal">
           <p class="professor-line"><span class="role">학과장 교수</span><strong>박태욱 교수님</strong></p>
           <p class="professor-line"><span class="role">지도 교수</span><strong>문은미 교수님 · 이미희 교수님</strong></p>
@@ -696,40 +835,24 @@
       </section>
 
       <section class="committee reveal" aria-labelledby="committee-title">
-        <h2 id="committee-title">졸업준비위원회</h2>
+        <h2 class="tape-label tape-down" id="committee-title">졸업준비위원회</h2>
         <p class="names">안승희 · 김다빈 · 김도희 · 차수연 · 김성은 · 김소은 · 안채연</p>
       </section>
 
       <section class="participants" aria-labelledby="participants-title">
-        <h2 id="participants-title">Participants</h2>
+        <h2 class="tape-label tape-down" id="participants-title">Participants</h2>
         <ol class="participant-list">
-          <li class="participant-row reveal"><span class="number">01</span><span class="names">강지인</span></li>
-          <li class="participant-row reveal"><span class="number">02</span><span class="names">고예서</span></li>
-          <li class="participant-row reveal"><span class="number">03</span><span class="names">구세연</span></li>
-          <li class="participant-row reveal"><span class="number">04</span><span class="names">김다빈</span></li>
-          <li class="participant-row reveal"><span class="number">05</span><span class="names">김다연</span></li>
-          <li class="participant-row reveal"><span class="number">06</span><span class="names">김도희</span></li>
-          <li class="participant-row reveal"><span class="number">07</span><span class="names">김성은</span></li>
-          <li class="participant-row reveal"><span class="number">08</span><span class="names">김소은</span></li>
-          <li class="participant-row reveal"><span class="number">09</span><span class="names">김정연</span></li>
-          <li class="participant-row reveal"><span class="number">10</span><span class="names">문가은</span></li>
-          <li class="participant-row reveal"><span class="number">11</span><span class="names">문성희</span></li>
-          <li class="participant-row reveal"><span class="number">12</span><span class="names">문세희</span></li>
-          <li class="participant-row reveal"><span class="number">13</span><span class="names">박윤지</span></li>
-          <li class="participant-row reveal"><span class="number">14</span><span class="names">배수영</span></li>
-          <li class="participant-row reveal"><span class="number">15</span><span class="names">안수연</span></li>
-          <li class="participant-row reveal"><span class="number">16</span><span class="names">안승희</span></li>
-          <li class="participant-row reveal"><span class="number">17</span><span class="names">안채연</span></li>
-          <li class="participant-row reveal"><span class="number">18</span><span class="names">이다빈</span></li>
-          <li class="participant-row reveal"><span class="number">19</span><span class="names">이다솔</span></li>
-          <li class="participant-row reveal"><span class="number">20</span><span class="names">이수민</span></li>
-          <li class="participant-row reveal"><span class="number">21</span><span class="names">이주희</span></li>
-          <li class="participant-row reveal"><span class="number">22</span><span class="names">이채린</span></li>
-          <li class="participant-row reveal"><span class="number">23</span><span class="names">정윤서</span></li>
-          <li class="participant-row reveal"><span class="number">24</span><span class="names">조민서</span></li>
-          <li class="participant-row reveal"><span class="number">25</span><span class="names">차수연</span></li>
-          <li class="participant-row reveal"><span class="number">26</span><span class="names">최예림</span></li>
-          <li class="participant-row reveal"><span class="number">27</span><span class="names">최예슬</span></li>
+          <li class="participant-row reveal"><span class="number">01</span><span class="names">김다빈 · 김도희 · 안승희</span></li>
+          <li class="participant-row reveal"><span class="number">02</span><span class="names">이주희 · 이채린 · 최예슬</span></li>
+          <li class="participant-row reveal"><span class="number">03</span><span class="names">강지인 · 안수연</span></li>
+          <li class="participant-row reveal"><span class="number">04</span><span class="names">김소은 · 안채연 · 차수연</span></li>
+          <li class="participant-row reveal"><span class="number">05</span><span class="names">구세연 · 김성은 · 박윤지</span></li>
+          <li class="participant-row reveal"><span class="number">06</span><span class="names">문가은 · 문성희</span></li>
+          <li class="participant-row reveal"><span class="number">07</span><span class="names">김다연 · 문세희 · 최예림</span></li>
+          <li class="participant-row reveal"><span class="number">08</span><span class="names">이다빈</span></li>
+          <li class="participant-row reveal"><span class="number">09</span><span class="names">김정연 · 이다솔 · 조민서</span></li>
+          <li class="participant-row reveal"><span class="number">10</span><span class="names">고예서 · 이수민</span></li>
+          <li class="participant-row reveal"><span class="number">11</span><span class="names">배수영 · 정윤서</span></li>
         </ol>
       </section>
     </section>
@@ -740,7 +863,11 @@
       <button class="share-link" type="button" data-share>링크로 초대장 공유하기</button>
       <br>
       <a class="instagram" href="https://instagram.com/dsid_2026" target="_blank" rel="noopener noreferrer" aria-label="인스타그램 dsid 2026 계정 열기">
-        <span aria-hidden="true">◎</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+          <circle cx="12" cy="12" r="4"></circle>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+        </svg>
         @dsid_2026
       </a>
       <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
@@ -758,14 +885,14 @@
         <p class="location-notice">화환 반입이 불가합니다.</p>
       </div>
       <nav class="map-links" aria-label="지도 앱에서 장소 검색">
-        <a href="https://map.naver.com/p/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EA%B0%A4%EB%9F%AC%EB%A6%AC%20%EB%8D%95%EC%88%98%EA%B6%81%EA%B8%B8%20114" target="_blank" rel="noopener noreferrer">NAVER MAP</a>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Space+Sophora+Gallery%2C+114+Deoksugung-gil%2C+Jung-gu%2C+Seoul" target="_blank" rel="noopener noreferrer">GOOGLE MAPS</a>
-        <a href="https://map.kakao.com/link/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EA%B0%A4%EB%9F%AC%EB%A6%AC" target="_blank" rel="noopener noreferrer">KAKAO MAP</a>
+        <a href="https://map.naver.com/p/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%8D%95%EC%88%98%EA%B6%81%EA%B8%B8%20114" target="_blank" rel="noopener noreferrer">NAVER MAP</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%2C%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%8D%95%EC%88%98%EA%B6%81%EA%B8%B8%20114" target="_blank" rel="noopener noreferrer">GOOGLE MAPS</a>
+        <a href="https://map.kakao.com/link/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%8D%95%EC%88%98%EA%B6%81%EA%B8%B8%20114" target="_blank" rel="noopener noreferrer">KAKAO MAP</a>
       </nav>
       <iframe
         class="map-frame"
         title="Space Sophora Gallery 위치 지도"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=126.9695%2C37.5625%2C126.9790%2C37.5690&amp;layer=mapnik&amp;marker=37.56575%2C126.97415"
+        src="https://www.google.com/maps?q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%86%8C%ED%8F%AC%EB%9D%BC%2C%20%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EB%8D%95%EC%88%98%EA%B6%81%EA%B8%B8%20114&amp;output=embed"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
@@ -780,7 +907,7 @@
       var invitation = document.getElementById("invitation");
       var pageTitle = document.getElementById("page-title");
       var shareStatus = document.getElementById("share-status");
-      var canonicalUrl = "https://grboy6770.github.io/dswu_id_mobile/";
+      var canonicalUrl = window.location.origin + window.location.pathname;
       var shareData = {
         title: "사이는 공간이 아니다 · DSID 제61회 졸업전시",
         text: "오프닝 10월 29일 17:30 · 전시 10월 30일–11월 4일 · Space Sophora Gallery",

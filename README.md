@@ -13,7 +13,7 @@
 메인 포스터, 전시 정보, 교수진·졸업준비위원회·참가자 명단, 스크롤 리빌,
 네이버·구글·카카오 지도 연결과 모바일 공유 기능이 포함되어 있습니다.
 
-**SNS 공유 썸네일**(`og-thumbnail.png`)과 **favicon**(`favicon.svg` 외)이 포함되어 있어,
+**SNS 공유 썸네일**(`og-thumbnail.jpg`)과 **favicon**(`favicon.svg` 외)이 포함되어 있어,
 카카오톡·인스타·페이스북 등에 링크를 붙이면 미리보기 이미지가 표시됩니다.
 
 ## 주요 이미지
@@ -23,26 +23,34 @@
 
 ---
 
-## 📱 모바일 웹주소 (배포 후)
+## 📱 모바일 웹주소
 
 ```
-https://grboy6770.github.io/dswu_id_mobile/
+https://dsid-2026.pages.dev/
 ```
 
-## 배포 방법 — Pages 한 번만 켜주면 됩니다
+GitHub 닉네임이 노출되지 않는 Cloudflare Pages 주소를 기본 공개 주소로 사용합니다.
+기존 GitHub Pages 주소는 보조 배포 주소로 유지합니다.
+
+## 배포 방법
+
+Cloudflare Pages 프로젝트 `dsid-2026`에 정적 파일을 배포합니다. 저장소 변경분을 커밋한 뒤
+Cloudflare Pages에 재배포하면 위 공개 주소에 반영됩니다.
+
+### 기존 GitHub Pages 보조 배포
 
 > Pages 최초 활성화(사이트 생성)는 **저장소 소유자만** 할 수 있습니다.
 > (Actions 워크플로우 토큰에는 이 권한이 없어 자동으로는 못 켭니다.)
 
-### 방법 A — 브랜치에서 바로 배포 (권장, 가장 간단)
+#### 방법 A — 브랜치에서 바로 배포
 1. `Settings → Pages → Build and deployment → Source`를 **Deploy from a branch**로 선택.
 2. Branch: `claude/mobile-web-address-bm0zg1`, 폴더 `/(root)` → **Save**.
-3. 1~2분 뒤 위 주소로 접속. (워크플로우 불필요)
+3. 1~2분 뒤 보조 주소 `https://grboy6770.github.io/dswu_id_mobile/`로 접속. (워크플로우 불필요)
 
-### 방법 B — GitHub Actions로 배포
+#### 방법 B — GitHub Actions로 배포
 1. `Settings → Pages → Source`를 **GitHub Actions**로 켠다. (여기서 Pages가 최초 생성됨)
 2. `Actions` 탭 → **Deploy to GitHub Pages** → **Run workflow**로 수동 실행.
-3. 실행이 성공하면 위 주소로 접속.
+3. 실행이 성공하면 위 GitHub Pages 보조 주소로 접속.
 
 ## 내용 수정
 초대장 문구·날짜·명단·장소·인스타그램·지도 링크는 모두 `index.html` 안에 있습니다.

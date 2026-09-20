@@ -2,3 +2,4 @@
 .references/
 tmp/
 _site/
+.wrangler/
